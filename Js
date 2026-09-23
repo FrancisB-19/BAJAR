@@ -1,0 +1,27 @@
+const form = document.getElementById("studentForm");
+const container = document.getElementById("studentContainer");
+
+form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const program = document.getElementById("program").value;
+
+    const card = document.createElement("div");
+    card.className = "student-card";
+
+    card.innerHTML = `
+        <h3>${name}</h3>
+        <p>${program}</p>
+        <button class="remove-btn">Remove</button>
+    `;
+
+    card.querySelector(".remove-btn").addEventListener("click", function () {
+        card.remove();
+    });
+
+    container.appendChild(card);
+
+    form.reset();
+});
