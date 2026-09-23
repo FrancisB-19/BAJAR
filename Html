@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+         <header>
+        <h1>Student Directory</h1>
+        <p>Add and manage student information.</p>
+    </header> 
+        
+    </section>
+
+    <section class="form-section">
+        <form id="studentForm">
+            <input type="text" id="name" placeholder="Student Name" required>
+
+            <input type="text" id="program" placeholder="Program" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <section id="studentContainer" class="student-grid">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
